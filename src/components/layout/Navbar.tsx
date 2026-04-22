@@ -27,14 +27,14 @@ export default function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-[13px] uppercase tracking-[0.2em] font-medium hover:text-accent transition-colors"
+              className="text-[15px] uppercase tracking-[0.2em] font-bold hover:text-accent transition-colors"
             >
               {item}
             </a>
           ))}
           <a
             href="#contact"
-            className="px-6 py-2.5 bg-slate-900 text-white text-[12px] uppercase tracking-[0.2em] font-bold rounded-lg hover:bg-accent transition-all shadow-md"
+            className="px-6 py-2.5 bg-slate-900 text-white text-[14px] uppercase tracking-[0.2em] font-bold rounded-lg hover:bg-accent transition-all shadow-md"
           >
             Enquire
           </a>

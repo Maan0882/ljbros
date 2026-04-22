@@ -20,11 +20,11 @@ export default function Contact() {
               <div className="w-12 h-[2px] bg-accent" />
               <span className="text-accent text-sm font-black uppercase tracking-[0.2em]">Project consultation</span>
             </div>
-            <h2 className="text-4xl sm:text-5xl md:text-7xl mb-10 text-white leading-tight tracking-tight font-black">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl mb-8 text-white leading-tight tracking-tight font-black">
               Start Your <br />
               <span className="text-accent italic font-light">Precision Build.</span>
             </h2>
-            <p className="text-base lg:text-lg text-slate-300 mb-12 max-w-lg leading-relaxed font-semibold">
+            <p className="text-base lg:text-m text-slate-300 mb-5 max-w-lg leading-relaxed font-semibold">
               Connect with our technical team to discuss specifications, load-bearing requirements, and logistics for your project.
             </p>
             
@@ -35,7 +35,17 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-[10px] lg:text-xs font-black uppercase tracking-[0.2em] text-slate-500 mb-1 lg:mb-2">Global Headquarters</h4>
-                  <p className="text-lg lg:text-xl text-white font-black">Bhiwadi, Rajasthan, India</p>
+                  <p className="text-lg lg:text-xl text-white font-black">Dharmaj, Gujarat, India</p>
+                </div>
+              </div>
+              <div className="flex gap-6 lg:gap-8 items-start group">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 border-2 border-slate-700 flex items-center justify-center text-white flex-shrink-0 group-hover:border-accent transition-colors bg-slate-800">
+                  <Phone size={24} />
+                </div>
+                <div>
+                  <h4 className="text-[10px] lg:text-xs font-black uppercase tracking-[0.2em] text-slate-500 mb-1 lg:mb-2">Direct Contact</h4>
+                  <p className="text-lg lg:text-xl text-white font-black">+91 999 999 9999</p>
+                  <p className="text-lg lg:text-xl text-white font-black">+91 888 888 8888</p>
                 </div>
               </div>
               <div className="flex gap-6 lg:gap-8 items-start group">
