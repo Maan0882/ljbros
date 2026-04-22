@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui;
+  
+  --color-primary: #0f172a;   /* Slate 900 */
+  --color-accent: #0ea5e9;    /* Sky 600 */
+  --color-secondary: #f8fafc; /* Slate 50 */
+  --color-muted: #475569;     /* Slate 600 - DARKENED for readability */
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  @apply antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 800; /* Bolder for visibility */
+  @apply tracking-tight;
+}
+
+.section-padding {
+  @apply py-16 px-6 md:py-32 md:px-12 lg:px-24;
+}
+
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
+
+.modern-card {
+  @apply bg-white border border-slate-200 shadow-sm hover:shadow-md transition-all duration-300 rounded-xl;
+}
+
+.text-gradient {
+  /* High contrast gradient with fallback */
+  -webkit-background-clip: text;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-accent;
+  @supports not (background-clip: text) {
+    @apply text-slate-900;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+}
