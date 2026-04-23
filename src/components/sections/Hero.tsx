@@ -26,7 +26,7 @@ export default function Hero() {
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl mb-8 lg:mb-10 leading-[0.95] font-black text-foreground tracking-tighter break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 lg:mb-10 leading-[0.95] font-black text-foreground tracking-tighter break-words">
               Precision <br />
               <span className="text-gradient">Infrastructure.</span>
             </h1>
@@ -79,7 +79,7 @@ export default function Hero() {
       </div>
 
       {/* Side Text */}
-      <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden xl:block">
+      <div className="absolute left-10 top-75 -translate-y-1/2 hidden xl:block">
         <div className="rotate-90 origin-left text-[10px] uppercase tracking-[0.5em] text-muted/30 font-bold">
           Precision Engineering // Concrete Solutions
         </div>
