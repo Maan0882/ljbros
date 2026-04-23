@@ -19,15 +19,24 @@ export const metadata: Metadata = {
   description: "Manufacturing excellence in reinforced concrete pipes since 1998. Premium quality for modern infrastructure.",
 };
 
+import { ThemeProvider } from "@/components/providers/theme-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable} scroll-smooth`}>
-      <body className="font-inter bg-white text-slate-900 antialiased">
-        {children}
+    <html lang="en" className={`${playfair.variable} ${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="font-inter bg-background text-foreground antialiased transition-colors duration-300">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
