@@ -18,10 +18,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    if (isOpen) setIsOpen(false);
+    const target = document.querySelector(targetId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      // Update URL hash without jumping
+      window.history.pushState(null, '', targetId);
+    }
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-background/80 backdrop-blur-md py-4 shadow-sm" : "bg-transparent py-4 lg:py-8"}`}>
       <div className="container-custom flex items-center justify-between">
-        <a href="#home" className="text-2xl font-serif tracking-tighter hover:opacity-70 transition-opacity">
+        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="text-2xl font-serif tracking-tighter hover:opacity-70 transition-opacity">
           LJ Bros<span className="text-accent">.</span>
         </a>
 
@@ -31,6 +42,7 @@ export default function Navbar() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
+              onClick={(e) => handleNavClick(e, `#${item.toLowerCase()}`)}
               className="text-[13px] lg:text-[15px] uppercase tracking-[0.2em] font-bold hover:text-accent transition-colors"
             >
               {item}
@@ -39,6 +51,7 @@ export default function Navbar() {
           
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, '#contact')}
             className="px-6 py-2.5 bg-primary text-background text-[12px] lg:text-[14px] uppercase tracking-[0.2em] font-bold rounded-lg hover:bg-accent hover:text-white transition-all shadow-md"
           >
             Enquire
@@ -82,16 +95,16 @@ export default function Navbar() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
+                  onClick={(e) => handleNavClick(e, `#${item.toLowerCase()}`)}
                   className="text-xl font-serif text-foreground hover:text-accent transition-colors"
-                  onClick={() => setIsOpen(false)}
                 >
                   {item}
                 </a>
               ))}
               <a
                 href="#contact"
+                onClick={(e) => handleNavClick(e, '#contact')}
                 className="mt-4 px-8 py-4 bg-primary text-background text-sm font-bold uppercase tracking-widest rounded-lg"
-                onClick={() => setIsOpen(false)}
               >
                 Enquire
               </a>

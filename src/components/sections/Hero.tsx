@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen flex flex-col pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-background">
+    <section id="home" className="relative min-h-screen mb flex flex-col pt-24 pb-16 lg:pt-32 lg:pb-20 overflow-hidden bg-background">
       {/* Structural Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-secondary -z-10 hidden lg:block" />
       <div className="absolute top-0 right-0 w-full h-full lg:w-1/3 bg-primary/[0.02] -z-10" />
@@ -26,7 +26,7 @@ export default function Hero() {
               </span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-8 lg:mb-10 leading-[0.95] font-black text-foreground tracking-tighter break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl xl:text-8xl mb-8 lg:mb-10 leading-[0.95] font-black text-foreground tracking-tighter break-words">
               Precision <br />
               <span className="text-gradient">Infrastructure.</span>
             </h1>
@@ -63,6 +63,7 @@ export default function Hero() {
                 src="/images/hero.png"
                 alt="Precision RCC Pipes"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
                 priority
               />

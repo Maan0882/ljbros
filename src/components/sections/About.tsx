@@ -44,10 +44,10 @@ export default function About() {
             className="lg:col-span-7 grid grid-cols-2 gap-4 md:gap-8"
           >
             <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl mt-12">
-              <Image src="/images/factory.png" alt="Manufacturing Precision" fill className="object-cover" />
+              <Image src="/images/factory.png" alt="Manufacturing Precision" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
             </div>
             <div className="relative aspect-[3/4] rounded-sm overflow-hidden shadow-2xl">
-              <Image src="/images/product.png" alt="Technical Excellence" fill className="object-cover" />
+              <Image src="/images/product.png" alt="Technical Excellence" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
               <div className="absolute inset-0 bg-primary/20 mix-blend-overlay" />
             </div>
             
